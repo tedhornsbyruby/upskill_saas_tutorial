@@ -21,6 +21,8 @@ class ProfilesController < ApplicationController
   
    # Get requests to /users/:user_id/profile/edit
   def edit
+    @user = User.find( params[:user_id] )
+    @profile = @user.profile
    
   end
   
